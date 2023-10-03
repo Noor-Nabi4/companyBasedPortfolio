@@ -1,13 +1,19 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
   // const elementRef = useRef(null);
+  const handleOnClickscroll = (section) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const openCloseNav = () => {
     setOpenNav(!openNav);
-  };/* 
+  }; /* 
   const dropdownActiveClass = () => {
     if (elementRef.current) {
       elementRef.current.classList.toggle('dropdown-active');
@@ -26,7 +32,7 @@ const Navbar = () => {
     linksInNav.forEach(function (navbarlink) {
       if (!navbarlink.hash) return;
       let element = navbarlink.hash.substring(1);
-      var section = document.getElementById(element); // Replace with your element's ID
+      var section = document.getElementById(element);
 
       if (!section) return;
       if (
@@ -45,27 +51,42 @@ const Navbar = () => {
     <nav id="navbar" className={` ${openNav ? "navbar-mobile" : "navbar"}`}>
       <ul>
         <li>
-          <Link className="nav-link scrollto active" to="#hero">
+          <Link
+            className="nav-link scrollto active"
+            onClick={(e) => handleOnClickscroll("hero")}
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link className="nav-link scrollto" to="#about">
+          <Link
+            className="nav-link scrollto"
+            onClick={(e) => handleOnClickscroll("about")}
+          >
             About
           </Link>
         </li>
         <li>
-          <Link className="nav-link scrollto" to="#services">
+          <Link
+            className="nav-link scrollto"
+            onClick={(e) => handleOnClickscroll("services")}
+          >
             Services
           </Link>
         </li>
         <li>
-          <Link className="nav-link   scrollto" to="#portfolio">
+          <Link
+            className="nav-link   scrollto"
+            onClick={(e) => handleOnClickscroll("portfolio")}
+          >
             Portfolio
           </Link>
         </li>
         <li>
-          <Link className="nav-link scrollto" to="#team">
+          <Link
+            className="nav-link scrollto"
+            onClick={(e) => handleOnClickscroll("team")}
+          >
             Team
           </Link>
         </li>
@@ -110,14 +131,21 @@ const Navbar = () => {
               <Link to="#">Drop Down 4</Link>
             </li>
           </ul>
-        </li>} */}
+        </li>} 
+        */}
         <li>
-          <Link className="nav-link scrollto" to="#contact">
+          <Link
+            className="nav-link scrollto"
+            onClick={(e) => handleOnClickscroll("contact")}
+          >
             Contact
           </Link>
         </li>
         <li>
-          <Link className="getstarted scrollto" to="#about">
+          <Link
+            className="getstarted scrollto"
+            onClick={(e) => handleOnClickscroll("about")}
+          >
             Get Started
           </Link>
         </li>
