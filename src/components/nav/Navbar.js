@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
   // const elementRef = useRef(null);
+
   const handleOnClickscroll = (section) => {
     const element = document.getElementById(section);
     if (element) {
@@ -32,7 +33,7 @@ const Navbar = () => {
     linksInNav.forEach(function (navbarlink) {
       if (!navbarlink.hash) return;
       let element = navbarlink.hash.substring(1);
-      var section = document.getElementById(element);
+      var section = document.getElementById(element); // Replace with your element's ID
 
       if (!section) return;
       if (
@@ -53,40 +54,29 @@ const Navbar = () => {
         <li>
           <Link
             className="nav-link scrollto active"
+            to="#hero"
             onClick={(e) => handleOnClickscroll("hero")}
           >
             Home
           </Link>
         </li>
         <li>
-          <Link
-            className="nav-link scrollto"
-            onClick={(e) => handleOnClickscroll("about")}
-          >
+          <Link className="nav-link scrollto" to="#about" onClick={e=>handleOnClickscroll("about")}>
             About
           </Link>
         </li>
         <li>
-          <Link
-            className="nav-link scrollto"
-            onClick={(e) => handleOnClickscroll("services")}
-          >
+          <Link className="nav-link scrollto" to="#services" onClick={e=>handleOnClickscroll("services")}>
             Services
           </Link>
         </li>
         <li>
-          <Link
-            className="nav-link   scrollto"
-            onClick={(e) => handleOnClickscroll("portfolio")}
-          >
+          <Link className="nav-link   scrollto" to="#portfolio" onClick={e=>handleOnClickscroll("portfolio")}>
             Portfolio
           </Link>
         </li>
         <li>
-          <Link
-            className="nav-link scrollto"
-            onClick={(e) => handleOnClickscroll("team")}
-          >
+          <Link className="nav-link scrollto" to="#team" onClick={e=>handleOnClickscroll("team")}>
             Team
           </Link>
         </li>
@@ -131,21 +121,14 @@ const Navbar = () => {
               <Link to="#">Drop Down 4</Link>
             </li>
           </ul>
-        </li>} 
-        */}
+        </li>} */}
         <li>
-          <Link
-            className="nav-link scrollto"
-            onClick={(e) => handleOnClickscroll("contact")}
-          >
+          <Link className="nav-link scrollto" to="#contact" onClick={e=>handleOnClickscroll("contact")}>
             Contact
           </Link>
         </li>
         <li>
-          <Link
-            className="getstarted scrollto"
-            onClick={(e) => handleOnClickscroll("hero")}
-          >
+          <Link className="getstarted scrollto" to="#hero" onClick={e=>handleOnClickscroll("hero")}>
             Get Started
           </Link>
         </li>
