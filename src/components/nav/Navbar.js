@@ -144,7 +144,7 @@ const Navbar = () => {
         <li>
           <Link
             className="getstarted scrollto"
-            onClick={(e) => handleOnClickscroll("about")}
+            onClick={(e) => handleOnClickscroll("hero")}
           >
             Get Started
           </Link>
