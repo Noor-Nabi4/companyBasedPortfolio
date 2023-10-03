@@ -1,6 +1,4 @@
 import AOS from "aos";
-import { Swiper } from "swiper/react";
-import GLightbox from "glightbox";
 import { Waypoint } from "react-waypoint";
 
 (function () {

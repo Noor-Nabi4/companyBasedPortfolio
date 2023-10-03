@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./WhyUs.css";
 import whyUs from "../../img/why-us.png";
 const WhyUs = () => {

@@ -1,18 +1,18 @@
-import React, { useState ,useRef} from "react";
+import React, { useState} from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
-  const elementRef = useRef(null);
+  // const elementRef = useRef(null);
 
   const openCloseNav = () => {
     setOpenNav(!openNav);
-  };
+  };/* 
   const dropdownActiveClass = () => {
     if (elementRef.current) {
       elementRef.current.classList.toggle('dropdown-active');
     }
-  }
+  } */
   const navbarlinksActive = () => {
     let selectHeader = document.getElementById("header");
     if (window.scrollY > 100) {

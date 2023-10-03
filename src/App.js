@@ -34,7 +34,7 @@ function App() {
         <WhyUs />
         <Skills />
         <Services />
-        {/* <CTA /> */}
+        <CTA />
         <Portfolio />
         <Team />
         <Pricing />
